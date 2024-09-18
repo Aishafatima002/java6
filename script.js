@@ -9,16 +9,20 @@
 // setTimeout(()=>{
 //     console.log("hello world");
 // },5000);
-// console.log("end")
+// // console.log("end")
 // setInterval(myFun,1000);
 // function myFun() {
-//     let d=new Date()
-//     let a=document.getElementById("demo").innerHTML;
-//     d.getHours()+":"+
+//     let d=new Date();
+//     document.getElementById("demo").innerHTML=
+//      d.getHours()+":"+
 //     d.getMinutes()+":"+
 //     d.getSeconds();
+    
 // }
+
+
 //a call back is a function passan argument to the function
+
 // function sum(a,b) {
 //     console.log(a+b)
 // }
@@ -47,6 +51,7 @@
 // }
 // greeting("welocome back",greet)
 //callback hell
+//is also called pyramid of dome
 //a nested callback in function
 // let age=19
 // if (age>18) {
@@ -61,7 +66,7 @@
 //         if (getNextData) {
 //             getNextData()
 //         }
-//     },2000);
+//     },4000);
 // }
 // getData(1,()=>{
 //     getData(2,()=>{
@@ -97,8 +102,119 @@
 //     }
 // )
 
-function sum(a,b,c) {
-    let sum =a+b+c
-    return sum
-}
-let myPromise=new Promise
+// function sum(some) {
+   
+//     document.getElementById("demo").innerHTML=some
+   
+// }
+// let myPromise=new Promise((resolve,reject)=>{
+//     let a=10;
+//     let b =30;
+//     let c=35;
+//     if (a+b+c===75) {
+//         resolve("correct answer")
+//     }
+//     else{
+//         reject("err")
+//     }
+// })
+// myPromise.then(
+//     function(value){
+//         sum(value)
+//     }
+// )
+// thien is used for resolve//catch is used for  reject
+// let complete=true
+
+// let prom=new Promise(function (resolve,reject) {
+//     if (complete) {
+//         resolve("Iam sucess")
+//     }
+//     else{
+//         reject("Iam failure")
+//     }
+// })
+// console.log(prom)
+// let prom=new Promise((resolve, reject) => {
+//     let x="hello world";
+//     let y="hello world";
+//     if(x===y){
+//         resolve()
+//     }
+//     else{
+//         reject()
+//     }
+// })
+
+// prom.then(function () {
+//     console.log("Iam resolved")
+// })
+// .catch(()=>{
+//     console.log("Iam reject")
+// })
+
+
+
+// let prom=new Promise((resolve, reject) => {
+//     let x="hello world";
+//     let y="hello world";
+//     if(x===y){
+//         resolve( "Iam resolved")
+//     }
+//     else{
+//         reject("Iam failure")
+//     }
+// })
+// prom.then((message)=>{
+   
+//     document.getElementById("demo").innerHTML=message
+// })
+// .catch((err)=>{
+  
+//     document.getElementById("demo").innerHTML=err
+// })
+// function prom(complete) {
+//     return new Promise((resolve, reject) => {
+//         console.log("fetching data,please wait")
+//         setTimeout(()=>{
+//             if (complete) {
+//                 resolve("iam suceesful")
+//             }
+//             else{
+//                 reject("iam fail")
+//             }
+//         },1000)
+      
+    
+//     })
+   
+// }
+// let unFull=(result)=>{
+//     console.log(result)
+// }
+// let reject=(error)=>{
+//     console.log(error);
+// }
+// prom(true).then(unFull);
+// prom(true).then(reject);
+// let sum=a/b
+// function prom(a,b) {
+//     return new Promise((resolve, reject) => {
+//         console.log("fetching data")
+//         setTimeout(()=>{
+//             if (sum) {
+//                 resolve("your answer:"+sum)
+//             }
+//             else{
+//                 reject("failed to calculate")
+//             }
+//         })
+//     },1000)
+// }
+// prom(10,5).then((result)=>{
+//     console.log(result)
+// })
+// prom(10,5).catch((error)=>{
+//     console.log(error)
+// })
+
